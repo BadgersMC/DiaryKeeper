@@ -1,0 +1,54 @@
+# DiaryKeeper Configuration
+
+give-on-first-join: true
+
+# Editing/signing
+allow-signing: false              # keep it writable forever
+owner-only-edit: true
+
+restrictions:
+  enderchest: true              # block diaries (and bundles containing diary) into ender chests
+  bundles: true                 # block diaries from going into bundles
+  shulkers: false               # block diaries (and bundles containing diary) into shulker boxes
+  chests: false                 # block diaries into chests (single/double, trapped)
+  barrels: false                # block diaries into barrels
+  hoppers: false                # block diaries into hoppers
+  droppers: false               # block diaries into droppers
+  dispensers: false             # block diaries into dispensers
+  furnaces: false               # block diaries into furnaces, smokers, and blast furnaces
+
+
+# Movement freedom (collectible design)
+allow-drop: true
+allow-container-move: true        # chests/shulkers/hoppers etc.
+
+# Indestructibility in-world
+indestructible:
+  prevent-combust: true
+  prevent-explosion: true
+  prevent-contact-damage: true    # cactus/void/contact & generic damage to item entities
+  prevent-despawn: true
+
+# Void handling
+void:
+  return-to-dropper: true         # return to the player who dropped it
+  check-interval-ticks: 10        # only runs while tracked dropped diaries exist
+  safe-drop-if-inventory-full: true
+
+# Appearance
+appearance:
+  enchanted-glint: true
+  name-format: "&d{owner}'s Diary"
+  lore:
+    - "&7A unique collectible diary."
+    - "&7Owner: &f{owner}"
+    - "&8ID: {id-short}"
+
+# Duplicate detection (warn-only)
+duplicates:
+  warn-on-join: true
+  warn-on-container-open: true
+  warn-on-chunk-load: true
+  warn-on-startup: true
+  staff-notify: true              # send to players with diary.notify
+  debounce-seconds: 60

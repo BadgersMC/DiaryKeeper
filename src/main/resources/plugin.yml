@@ -1,0 +1,17 @@
+name: DiaryKeeper
+main: com.lincoln.diary.DiaryPlugin
+version: 1.0.0
+api-version: '1.21'
+authors: [ Lincoln ]
+description: One-of-a-kind, owner-editable collectible diaries (indestructible, void-safe, warn on duplicates)
+commands:
+  diary:
+    description: Diary admin
+    usage: /diary <reload|issue <player>|status <player>>
+    permission: diary.admin
+
+permissions:
+  diary.admin:
+    default: op
+  diary.notify:
+    default: op   # Give this to mods/staff via LuckPerms
